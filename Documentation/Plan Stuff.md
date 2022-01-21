@@ -1,5 +1,7 @@
 <u><ins>CONVERTER:</ins></u>
 
+    When the user enters a number, convert them to both other formats at the same time.
+
 INPUT inpVal  
 IF inpVal is integer between 0-255  
 &emsp;(for binary)  
