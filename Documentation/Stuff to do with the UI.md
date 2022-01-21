@@ -21,4 +21,4 @@ private void decLF(object sender, RoutedEventArgs e)
         }
 ```
 The subroutine will execute the code within it when the textbox becomes unfocused. In this case it will carry out decimal to hex and binary conversions.  
-'decLF' = decimal lost focus
+- 'decLF' = decimal lost focus
