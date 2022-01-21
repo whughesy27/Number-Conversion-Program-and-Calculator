@@ -1,4 +1,4 @@
-<u>CONVERTER:</u>
+<u><ins>CONVERTER:</ins></u>
 
 INPUT inpVal  
 IF inpVal is integer between 0-255  
