@@ -25,12 +25,15 @@ The subroutine will execute the code within it when the textbox becomes unfocuse
 
 <u><ins>UI</ins></u>
 
-Main Menu window - Gives the user the option to use either the converter or the calculator.
+<b>Main Menu Window</b> - Gives the user the option to use either the converter or the calculator.
 
 <img src="https://user-images.githubusercontent.com/51515685/150527369-56d0dd51-7563-4a1c-bc38-b6a78d1ce3df.png" width="385" height="228">
     
-Converter window - Allows the user to enter a value into any of the three boxes. When 'CONVERT' or return is pressed, the value is converted to the other 2 formats and diplayed in the relevant boxes. If the value isn't suitable it returns a message.
+<b>Converter Window</b> - Allows the user to enter a value into any of the three boxes. When 'CONVERT' or return is pressed, the value is converted to the other 2 formats and diplayed in the relevant boxes. If the value isn't suitable it returns a message.
     
 <img src="https://user-images.githubusercontent.com/51515685/150527761-480ad8b9-8623-419b-be74-2a9e83f457cb.png" width="385" height="228">
     
+<b>Calculator Window</b> - Allows the user to enter 2, 8-bit binary numbers and displays the sum in both binary and decimal. If the values generate an overflow or are invalid it returns a message.
+
+<img src="https://user-images.githubusercontent.com/51515685/150529657-b75e1cc7-03f8-4245-a2ed-90e940d12cf8.png" width="385" height="228">
 
