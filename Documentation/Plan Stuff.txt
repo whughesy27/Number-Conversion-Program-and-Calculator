@@ -18,6 +18,17 @@ IF inpVal is integer between 0-255
       reverse inpVal (so index value is suitable when doing powers)
       IF inpVal[position in string] = 1
         Total + 2^string position (if the current value in the string is a '1', do 2 to the power of the index value and add to the total)
+        - 2^string position
         
     (for hexadecimal)
-    use the same method from before, using the int 'Total' from the bin to decimal
+    use the same method from before using the int 'Total' from the bin to decimal
+
+  IF inpVal is 2 hexadecimal
+    (for decimal)
+    ARRAY 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F
+    FOR n < 2
+      IF inpVal[n] is in ARRAY
+        Total + index value of n in the array * 16 (only + for second value)
+        
+    (for binary)
+    use the same method from before using the int 'Total'
