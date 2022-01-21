@@ -1,7 +1,7 @@
 # Number-Conversion-Program-and-Calculator
 A hex-dec-bin conversion program and 8-bit binary calculator for a programming project.
 
-*Requires Net.6*
+*Requires .NET 6.0*
 
 
 - 'Main C# Files' contains the code for the Converter and Calcultor.
