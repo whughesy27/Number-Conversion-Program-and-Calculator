@@ -22,7 +22,7 @@ IF inpVal is integer between 0-255
 &emsp;&emsp;&emsp;reverse inpVal (so index value is suitable when doing powers)  
 &emsp;&emsp;&emsp;IF inpVal[position in string] = 1  
 &emsp;&emsp;&emsp;&emsp;Total + 2^string position (if the current value in the string is a '1', do 2 to the power of the index value and add to the total)  
-&emsp;&emsp;&emsp;&emsp;- 2^string position  
+&emsp;&emsp;&emsp;&emsp;inpVal - 2^string position  
         
     (for hexadecimal)
     use the same method from before using the int 'Total' from the bin to decimal
