@@ -1,12 +1,14 @@
-INPUT inpVal
-IF inpVal is integer between 0-255
-  (for binary)
-  n = 7 (maybe use inpVal.Length?)
-  ARRAY 0, 0, 0, 0, 0, 0, 0, 0
-  FOR n >=0
-    IF inpVal >= 2^n
-      ARRAY[current position] = 1 (replace the value in the array with a '1'. move along the array each loop)
-      n - 1
+<u>CONVERTER:</u>
+
+INPUT inpVal  
+IF inpVal is integer between 0-255  
+&emsp;(for binary)  
+&emsp;n = 7 (maybe use inpVal.Length?)  
+&emsp;ARRAY 0, 0, 0, 0, 0, 0, 0, 0  
+&emsp;FOR n >=0  
+&emsp;&emsp;IF inpVal >= 2^n  
+&emsp;&emsp;&emsp;ARRAY[current position] = 1 (replace the value in the array with a '1'. move along the array each loop)  
+&emsp;&emsp;&emsp;n - 1  
   
   (for hexadecimal)
   ARRAY 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F (hexadecimal values)
