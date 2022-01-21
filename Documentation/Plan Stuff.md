@@ -34,3 +34,10 @@ IF inpVal is integer between 0-255
         
     (for binary)
     use the same method from before using the int 'Total'
+
+<u><ins>CALCULATOR</ins></u>
+
+    Convert both of the entered values to integers using the same method from befor and add them to get the resut for decimal.
+    IF 0 >= result <= 255
+    &emsp;Convert the integer back to binary
+    &emsp;OUTPUT both results
