@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,21 +30,23 @@ namespace Converter
             this.Close();
         }
 
-        private static void CharChecker (char[] binValues, ref bool charCheck)
+        private static bool CharChecker (char[] binValues)
         {
             //subroutine checks that the users input only contains 1 or 0
             foreach (char i in binValues)
             {
                 if (i != '0' && i != '1')
                 {
-                    charCheck = false;
+                    return false;
                 }
             }
+            return true;
         }
 
-        private static void DenConversion (char[] binValues, ref int n)
+        private static int DenConversion (char[] binValues)
         {
             //subroutine convert the binary values the user has entered to an integer
+            int n = 0;
             Array.Reverse(binValues);
             for (int i = 7; i >= 0; i--)
             {
@@ -53,6 +55,7 @@ namespace Converter
                     n += (int)Math.Pow(2, i);                    
                 }
             }
+            return n;
         }
 
         //code is excecuted upon button press
@@ -68,14 +71,9 @@ namespace Converter
             char[] binValues1 = binEntry1.Text.ToCharArray();
             char[] binValues2 = binEntry2.Text.ToCharArray();
             char[] binResult = { '0', '0', '0', '0', '0', '0', '0', '0' };
-            int denValue1 = 0;
-            int denValue2 = 0;
-            bool charCheck1 = true;
-            bool charCheck2 = true;
 
-            //input validation - makes sure that what the user has entered is suitable
-            CharChecker(binValues1, ref charCheck1);
-            CharChecker(binValues2, ref charCheck2);
+            bool charCheck1 = CharChecker(binValues1);
+            bool charCheck2 = CharChecker(binValues2);
 
             if (binEntry1.Text == "" || binEntry2.Text == "")
             {
@@ -91,9 +89,8 @@ namespace Converter
             }
             else
             {
-                //values passed by ref so the value of 'n' becomes the new denValue
-                DenConversion(binValues1, ref denValue1);
-                DenConversion(binValues2, ref denValue2);
+                int denValue1 = DenConversion(binValues1);
+                int denValue2 = DenConversion(binValues2);
 
                 //adds together the two values to get the result
                 int denResult = denValue1 + denValue2;
@@ -125,3 +122,4 @@ namespace Converter
         }
     }
 }
+
