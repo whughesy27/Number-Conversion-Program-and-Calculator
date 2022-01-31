@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,8 +24,9 @@ namespace Converter
             InitializeComponent();
         }
 
-        private string[] decToBin(int decValue, ref string[] binValues)
+        private string[] decToBin(int decValue)
         {
+            string[] binValues = { "0", "0", "0", "0", "0", "0", "0", "0" };
             int n = 7;
             for (int i = 0; i < 8; i++)
             {
@@ -120,8 +121,7 @@ namespace Converter
                 string[] hexValues = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F" };
                 hexTxtBox.Text = hexValues[denInput / 16] + hexValues[denInput % 16];
 
-                string[] binValues = { "0", "0", "0", "0", "0", "0", "0", "0" };
-                decToBin(denInput, ref binValues);
+                string[] binValues = decToBin(denInput);
                 binTxtBox.Text = String.Join("", binValues);
             }
 
@@ -171,8 +171,7 @@ namespace Converter
                     return;
                 }
 
-                string[] binValues = { "0", "0", "0", "0", "0", "0", "0", "0" };
-                decToBin(denValue, ref binValues);
+                string[] binValues = decToBin(denValue);
                 binTxtBox.Text = String.Join("", binValues);
             }
 
