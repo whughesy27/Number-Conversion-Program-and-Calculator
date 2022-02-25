@@ -105,7 +105,7 @@ namespace Converter
             {
                 try
                 {
-                    denInput = int.Parse(decTxtBox.Text);
+                    denInput = int.Parse(decTxtBox.Text.Replace(" ", ""));
                 }
                 catch (FormatException)
                 {
