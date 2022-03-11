@@ -53,12 +53,8 @@ namespace Converter
             {
                 errorMessage.Content = "Enter a Value First";
             }
-            else if (binTxtBox.Text.Length != 8)
-            {
-                errorMessage.Content = "Invalid Entry";
-            }
 
-            foreach (char i in binTxtBox.Text)
+            foreach (char i in binTxtBox.Text.Replace(" ", ""))
             {
                 if (i != '0' && i != '1')
                 {
@@ -67,10 +63,10 @@ namespace Converter
                 }
             }
 
-            if (charCheck == true && binTxtBox.Text.Length == 8)
+            if (charCheck == true)
             {
                 int n = 0;
-                char[] denValues = binTxtBox.Text.ToCharArray();
+                char[] denValues = binTxtBox.Text.Replace(" ", "").ToCharArray();
                 Array.Reverse(denValues);
 
                 for (int i = 0; i < denValues.Length; i++)
