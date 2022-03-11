@@ -48,11 +48,12 @@ namespace Converter
             //subroutine convert the binary values the user has entered to an integer
             int n = 0;
             Array.Reverse(binValues);
-            for (int i = 7; i >= 0; i--)
+
+            for (int i = 0; i < binValues.Length; i++)
             {
                 if (binValues[i] == '1')
                 {
-                    n += (int)Math.Pow(2, i);                    
+                    n += (int)Math.Pow(2, i);
                 }
             }
             return n;
@@ -68,8 +69,8 @@ namespace Converter
             errorMessage.Content = "";
 
             //declaring variables & arrays
-            char[] binValues1 = binEntry1.Text.ToCharArray();
-            char[] binValues2 = binEntry2.Text.ToCharArray();
+            char[] binValues1 = binEntry1.Text.Replace(" ", "").ToCharArray();
+            char[] binValues2 = binEntry2.Text.Replace(" ", "").ToCharArray();
             char[] binResult = { '0', '0', '0', '0', '0', '0', '0', '0' };
 
             bool charCheck1 = CharChecker(binValues1);
@@ -78,10 +79,6 @@ namespace Converter
             if (binEntry1.Text == "" || binEntry2.Text == "")
             {
                 errorMessage.Content = "Enter Both Values First";
-            }
-            else if (binEntry1.Text.Length != 8 || binEntry2.Text.Length != 8)
-            {
-                errorMessage.Content = "One or More Invalid Entries";
             }
             else if (charCheck1 == false || charCheck2 == false)
             {
@@ -122,4 +119,3 @@ namespace Converter
         }
     }
 }
-
